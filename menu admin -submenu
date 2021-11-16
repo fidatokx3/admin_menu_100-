@@ -1,0 +1,25 @@
+defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
+ function ft_admin_menu()
+ {
+   add_menu_page('Forms','% Discount','manage_options','ft_admin_menu','ft_admin_menu_main','dashicons-welcome-widgets-menus',7);
+   add_submenu_page('ft_admin_menu','Archive Submissions','Rate Rules','manage_options','ft_admin_menu_sub-archive','ft_admin_menu_sub_archive');
+   
+
+ }
+ add_action('admin_menu','ft_admin_menu');
+ function ft_admin_menu_main()
+ { //sub menu top
+   echo "<h2>WelCome to  </h2> Senior Card Discount Process Setup Panel  ";
+require_once('setup.php');
+
+}
+ function ft_admin_menu_sub_archive()
+ {
+   echo "<h2>WelCome to  </h2> Senior Card Discount Process Info Panel ";
+   
+ }
+ function ft_admin_menu_sub_archive2()
+ {
+   echo "<h2>xxxxxxxxxxxxxxxxxxxxxx</h2> Senior Card Discount Process Info Panel ";
+   
+ }
